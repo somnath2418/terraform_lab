@@ -2,7 +2,7 @@ resource "azurerm_windows_virtual_machine" "vm" {
   name                = var.name
   resource_group_name = var.rg_name
   location            = var.location
-  size                = "Standard_B2s"
+  size                = "Standard_D2s_v3"
   admin_username      = var.admin_username
   admin_password      = var.admin_password
 
@@ -16,7 +16,7 @@ resource "azurerm_windows_virtual_machine" "vm" {
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
     offer     = "WindowsServer"
-    sku       = "2022-Datacenter"
+    sku       = "2019-Datacenter"
     version   = "latest"
   }
 }
