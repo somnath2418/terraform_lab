@@ -38,7 +38,7 @@ module "nic" {
   location  = var.location
   rg_name   = module.rg.name
   subnet_id = module.network.subnet_id
-  pip_id    = module.pip.ip_address
+  pip_id    = module.pip.pip_id 
 }
 
 module "vm" {
