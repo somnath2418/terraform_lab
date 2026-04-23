@@ -25,12 +25,6 @@ module "nsg" {
   my_ip    = var.my_ip
 }
 
-module "pip" {
-  source   = "./modules/public_ip"
-  name     = "pip-prod"
-  location = var.location
-  rg_name  = module.rg.name
-}
 
 module "nic" {
   source    = "./modules/nic"
@@ -38,8 +32,7 @@ module "nic" {
   location  = var.location
   rg_name   = module.rg.name
   subnet_id = module.network.subnet_id
-  pip_id    = module.pip.pip_id 
-}
+  }
 
 module "vm" {
   source         = "./modules/virtual_machine"
