@@ -5,3 +5,7 @@ output "public_ip" {
 output "vm_name" {
   value = module.vm.vm_name
 }
+
+output "debug_pip_id" {
+  value = module.pip.pip_id
+}
