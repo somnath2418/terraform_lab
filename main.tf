@@ -42,11 +42,11 @@ module "nic" {
 }
 
 module "vm" {
-  source          = "./modules/virtual_machine"
-  name            = "vm-prod"
-  location        = var.location
-  rg_name         = module.rg.name
-  nic_id          = module.nic.nic_id
-  admin_username  = var.admin_username
-  admin_password  = var.admin_password
+  source         = "./modules/virtual_machine"
+  name           = "vm-prod"
+  location       = var.location
+  rg_name        = module.rg.name
+  nic_id         = module.nic.nic_id
+  admin_username = var.admin_username
+  admin_password = var.admin_password
 }
